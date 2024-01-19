@@ -1,0 +1,44 @@
+package com.solid.entity;
+
+import java.util.ArrayList;
+
+import com.solid.services.BookingService;
+
+public class ServiceProvider extends User {
+	private String serviceProviderFirstName;
+	private String serviceProviderLastName;
+	private String serviceProviderAddress;
+	private String serviceProviderContact;
+	private ArrayList<BookingService> servicesProvided;
+	public String getServiceProviderFirstName() {
+		return serviceProviderFirstName;
+	}
+	public void setServiceProviderFirstName(String serviceProviderFirstName) {
+		this.serviceProviderFirstName = serviceProviderFirstName;
+	}
+	public String getServiceProviderLastName() {
+		return serviceProviderLastName;
+	}
+	public void setServiceProviderLastName(String serviceProviderLastName) {
+		this.serviceProviderLastName = serviceProviderLastName;
+	}
+	public String getServiceProviderAddress() {
+		return serviceProviderAddress;
+	}
+	public void setServiceProviderAddress(String serviceProviderAddress) {
+		this.serviceProviderAddress = serviceProviderAddress;
+	}
+	public String getServiceProviderContact() {
+		return serviceProviderContact;
+	}
+	public void setServiceProviderContact(String serviceProviderContact) {
+		this.serviceProviderContact = serviceProviderContact;
+	}
+	public ArrayList<BookingService> getServicesProvided() {
+		return servicesProvided;
+	}
+	public void setServicesProvided(ArrayList<BookingService> servicesProvided) {
+		this.servicesProvided = servicesProvided;
+	}
+	
+}

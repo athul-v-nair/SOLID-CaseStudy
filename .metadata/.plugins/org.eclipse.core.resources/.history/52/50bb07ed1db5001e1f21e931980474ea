@@ -1,0 +1,25 @@
+package com.solid.entity;
+
+import java.util.ArrayList;
+
+import com.solid.interfaces.*;
+
+public class NormalCustomer extends Customer implements Advertisement, CreateBooking, CancelBooking{
+	
+	public NormalCustomer(String userId, String username, String emailId, String password, String mobileNumber,
+			String securityQuestion, String securityAnswer, String customerFirstName, String customerLastName,
+			String customerAddress, String customerPaymentDetails, ArrayList<Booking> customerBookings) {
+		super(userId, username, emailId, password, mobileNumber, securityQuestion, securityAnswer, customerFirstName,
+				customerLastName, customerAddress, customerPaymentDetails, customerBookings);
+	}
+
+	@Override
+    public void advertisements() {
+        System.out.println("Show advertisements for Normal Users");
+    }
+	@Override
+	public void cancel() {
+		System.out.println("Normal User can cancel booking");
+	}
+}
+

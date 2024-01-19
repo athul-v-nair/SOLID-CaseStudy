@@ -1,0 +1,22 @@
+package com.solid.services;
+
+import java.util.Scanner;
+
+public class CustomerCreation {
+	public static void customerCreation() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter Username");
+		String username = scanner.nextLine();
+		System.out.println("Enter EmailId");
+		String emailId = scanner.nextLine();
+		System.out.println("Enter Password");
+		String password = scanner.nextLine();
+		System.out.println("Enter Mobile Number");
+		String mobileNumber = scanner.nextLine();
+		System.out.println("Enter Security Question");
+		String securityQuestion = scanner.nextLine();
+		System.out.println("Enter Answer to the question");
+		String securityAnswer = scanner.nextLine();
+	}
+}

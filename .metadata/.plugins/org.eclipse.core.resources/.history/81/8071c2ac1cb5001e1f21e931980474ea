@@ -1,0 +1,16 @@
+package com.solid.entity;
+
+import com.solid.interfaces.Advertisement;
+
+public class NormalUser extends User implements Advertisement, CreateBooking, CancelBooking{
+
+	public NormalUser(String userId, String username, String emailId, String password, String mobileNumber,
+			String securityQuestion, String securityAnswer) {
+		super(userId, username, emailId, password, mobileNumber, securityQuestion, securityAnswer);
+	}
+	
+	@Override
+    public void advertisements() {
+        System.out.println("Show advertisements for Normal Users");
+    }
+}

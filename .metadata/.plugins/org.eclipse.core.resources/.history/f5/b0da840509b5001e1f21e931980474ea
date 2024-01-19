@@ -1,0 +1,5 @@
+package com.solid.entity;
+
+public class ServiceProvider extends User {
+
+}

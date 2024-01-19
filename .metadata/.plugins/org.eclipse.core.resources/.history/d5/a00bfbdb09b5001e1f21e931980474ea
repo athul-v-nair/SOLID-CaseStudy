@@ -1,0 +1,42 @@
+package com.solid.entity;
+
+import java.util.ArrayList;
+
+public class Customer extends User {
+	private String customerFirstName;
+	private String customerLastName;
+	private String customerAddress;
+	private String customerPaymentDetails;
+	private ArrayList<Booking> customerBookings;
+	public String getCustomerFirstName() {
+		return customerFirstName;
+	}
+	public void setCustomerFirstName(String customerFirstName) {
+		this.customerFirstName = customerFirstName;
+	}
+	public String getCustomerLastName() {
+		return customerLastName;
+	}
+	public void setCustomerLastName(String customerLastName) {
+		this.customerLastName = customerLastName;
+	}
+	public String getCustomerAddress() {
+		return customerAddress;
+	}
+	public void setCustomerAddress(String customerAddress) {
+		this.customerAddress = customerAddress;
+	}
+	public String getCustomerPaymentDetails() {
+		return customerPaymentDetails;
+	}
+	public void setCustomerPaymentDetails(String customerPaymentDetails) {
+		this.customerPaymentDetails = customerPaymentDetails;
+	}
+	public ArrayList<Booking> getCustomerBookings() {
+		return customerBookings;
+	}
+	public void setCustomerBookings(ArrayList<Booking> customerBookings) {
+		this.customerBookings = customerBookings;
+	}
+	
+}

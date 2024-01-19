@@ -1,0 +1,7 @@
+package com.solid.interfaces;
+
+public interface UserActions {
+	public static void register() {
+		System.out.println("User registered");
+	}
+}

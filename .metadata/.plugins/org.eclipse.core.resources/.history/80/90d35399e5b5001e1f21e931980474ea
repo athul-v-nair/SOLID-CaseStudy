@@ -1,0 +1,102 @@
+package com.solid.utility;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.solid.entity.*;
+import com.solid.services.BookingService;
+
+public class MainUtility {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Travel Booking Page");
+		System.out.println("~~~~~~~~~~~~~~~~~~~");
+		
+		System.out.println("Enter Username");
+		String username = scanner.nextLine();
+		System.out.println("Enter EmailId");
+		String emailId = scanner.nextLine();
+		System.out.println("Enter Password");
+		String password = scanner.nextLine();
+		System.out.println("Enter Mobile Number");
+		String mobileNumber = scanner.nextLine();
+		System.out.println("Enter Security Question");
+		String securityQuestion = scanner.nextLine();
+		System.out.println("Enter Answer to the question");
+		String securityAnswer = scanner.nextLine();
+		
+		int userType;
+		System.out.println("Enter Type of User You Want To Be:\n1.Customer, 2.Service Provider\nEnter your choice");
+		userType = scanner.nextInt();
+		scanner.nextLine();
+		Customer customer = null;
+		ServiceProvider serviceProvider = null;
+		
+		switch(userType) {
+		case 1: System.out.println("Enter Customer First Name");
+		String customerFirstName = scanner.nextLine();
+		System.out.println("Enter Customer Last Name");
+		String customerLastName = scanner.nextLine();
+		System.out.println("Enter Customer Address");
+		String customerAddress = scanner.nextLine();
+		System.out.println("Enter Customer Payment Details");
+		String customerPaymentDetails = scanner.nextLine();
+		//customer bookings
+		ArrayList<Booking> customerBookingList = new ArrayList<Booking>();
+		Booking booking = new Booking();
+		customerBookingList.add(booking);
+		
+		customer = new Customer("U100",username,emailId,password,mobileNumber,securityQuestion,securityAnswer,customerFirstName,customerLastName,customerAddress,customerPaymentDetails,customerBookingList);
+		
+		System.out.println("Review your account details:");
+		System.out.println(customer.getUserId());
+		System.out.println(customer.getUsername());
+		System.out.println(customer.getEmailId());
+		System.out.println(customer.getMobileNumber());
+		System.out.println(customer.getSecurityQuestion());
+		System.out.println(customer.getSecurityAnswer());
+		System.out.println(customer.getCustomerFirstName());
+		System.out.println(customer.getCustomerLastName());
+		System.out.println(customer.getCustomerAddress());
+		System.out.println(customer.getCustomerPaymentDetails());
+		break;
+		case 2:	System.out.println("Enter Service Provider Name");
+		String serviceProviderName = scanner.nextLine();
+		System.out.println("Enter Service Provider Address");
+		String serviceProviderAddress = scanner.nextLine();
+		System.out.println("Enter Service Provider Contact");
+		String serviceProviderContact = scanner.nextLine();
+		BookingService bookingService = new BookingService();
+		ArrayList<BookingService> bookingServiceList = new ArrayList<BookingService>();
+		bookingServiceList.add(bookingService);
+		
+		serviceProvider = new ServiceProvider("U100",username,emailId,password,mobileNumber,securityQuestion,securityAnswer,serviceProviderName,serviceProviderAddress,serviceProviderContact,bookingServiceList);
+		}
+		
+		int options;
+		char ch;
+		
+		do {
+			System.out.println("1.View your previous bookings, 2.View available actions");
+			options = scanner.nextInt();
+			scanner.nextLine();
+			switch(options) {
+			case 1: System.out.println(customer.getCustomerBookings());
+			break;
+			case 2: System.out.println("Available actions:");
+				if(customer!=null) {
+					customer.book();
+					customer.cancel();
+				} else if(serviceProvider != null) {
+					serviceProvider.cancel();
+				}
+			}
+			System.out.println("Do you want to continue(y/n):");
+			ch = scanner.next().charAt(0);
+			scanner.nextLine();
+		}while(ch=='y'||ch=='Y');
+		
+	}
+}

@@ -1,0 +1,52 @@
+package com.solid.utility;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.solid.entity.*;
+
+public class MainUtility {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Travel Booking Page");
+		System.out.println("~~~~~~~~~~~~~~~~~~~");
+		
+		System.out.println("Enter Username");
+		String username = scanner.nextLine();
+		System.out.println("Enter EmailId");
+		String emailId = scanner.nextLine();
+		System.out.println("Enter Password");
+		String password = scanner.nextLine();
+		System.out.println("Enter Mobile Number");
+		String mobileNumber = scanner.nextLine();
+		System.out.println("Enter Security Question");
+		String securityQuestion = scanner.nextLine();
+		System.out.println("Enter Answer to the question");
+		String securityAnswer = scanner.nextLine();
+		
+		int userType;
+		System.out.println("Enter Type of User You Want To Be: 1.Customer, 2.Service Provider\nEnter your choice");
+		userType = scanner.nextInt();
+		scanner.nextLine();
+		
+		switch(userType) {
+		case 1: System.out.println("Enter Customer First Name");
+		String customerFirstName = scanner.nextLine();
+		System.out.println("Enter Customer Last Name");
+		String customerLastName = scanner.nextLine();
+		System.out.println("Enter Customer Address");
+		String customerAddress = scanner.nextLine();
+		System.out.println("Enter Customer Payment Details");
+		String customerPaymentDetails = scanner.nextLine();
+		//customer bookings
+		ArrayList<Booking> customerBookings = new ArrayList<Booking>();
+		Booking booking = new Booking();
+		customerBookings.add(booking);
+		
+		Customer customer = new Customer("U100",username,emailId,password,mobileNumber,securityQuestion,securityAnswer,customerFirstName,customerLastName,customerAddress,customerPaymentDetails,customerBookings);
+		}
+	
+	}
+}

@@ -1,0 +1,9 @@
+package com.solid.services;
+
+public class UserAccountServices {
+	public static void userAccountServices() {
+		UserActions userActions = new Admin();
+		UserRegistrationService userRegistrationService = new UserRegistrationService(userActions);
+		userRegistrationService.registerUser();
+	}
+}

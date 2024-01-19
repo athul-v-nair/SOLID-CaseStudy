@@ -1,0 +1,5 @@
+package com.solid.interfaces;
+
+public interface Advertisement {
+
+}

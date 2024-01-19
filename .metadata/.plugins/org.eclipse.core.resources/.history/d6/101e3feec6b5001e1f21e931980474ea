@@ -1,0 +1,61 @@
+package com.solid.entity;
+
+import java.util.ArrayList;
+
+import com.solid.interfaces.CancelBooking;
+import com.solid.services.BookingService;
+
+public class ServiceProvider extends User implements CancelBooking {
+	private String serviceProviderFirstName;
+	private String serviceProviderLastName;
+	private String serviceProviderAddress;
+	private String serviceProviderContact;
+	private ArrayList<BookingService> servicesProvided;
+	public String getServiceProviderFirstName() {
+		return serviceProviderFirstName;
+	}
+	public void setServiceProviderFirstName(String serviceProviderFirstName) {
+		this.serviceProviderFirstName = serviceProviderFirstName;
+	}
+	public String getServiceProviderLastName() {
+		return serviceProviderLastName;
+	}
+	public void setServiceProviderLastName(String serviceProviderLastName) {
+		this.serviceProviderLastName = serviceProviderLastName;
+	}
+	public String getServiceProviderAddress() {
+		return serviceProviderAddress;
+	}
+	public void setServiceProviderAddress(String serviceProviderAddress) {
+		this.serviceProviderAddress = serviceProviderAddress;
+	}
+	public String getServiceProviderContact() {
+		return serviceProviderContact;
+	}
+	public void setServiceProviderContact(String serviceProviderContact) {
+		this.serviceProviderContact = serviceProviderContact;
+	}
+	public ArrayList<BookingService> getServicesProvided() {
+		return servicesProvided;
+	}
+	public void setServicesProvided(ArrayList<BookingService> servicesProvided) {
+		this.servicesProvided = servicesProvided;
+	}
+	
+	
+	public ServiceProvider(String userId, String username, String emailId, String password, String mobileNumber,
+			String securityQuestion, String securityAnswer, String serviceProviderFirstName,
+			String serviceProviderLastName, String serviceProviderAddress, String serviceProviderContact,
+			ArrayList<BookingService> servicesProvided) {
+		super(userId, username, emailId, password, mobileNumber, securityQuestion, securityAnswer);
+		this.serviceProviderFirstName = serviceProviderFirstName;
+		this.serviceProviderLastName = serviceProviderLastName;
+		this.serviceProviderAddress = serviceProviderAddress;
+		this.serviceProviderContact = serviceProviderContact;
+		this.servicesProvided = servicesProvided;
+	}
+	@Override
+	public void cancel() {
+		System.out.println("Service Provider can cancel booking");
+	}
+}

@@ -1,0 +1,10 @@
+package com.solid.entity;
+
+public class NormalUser extends User {
+
+	public NormalUser(String userId, String username, String emailId, String password, String mobileNumber,
+			String securityQuestion, String securityAnswer) {
+		super(userId, username, emailId, password, mobileNumber, securityQuestion, securityAnswer);
+	}
+
+}

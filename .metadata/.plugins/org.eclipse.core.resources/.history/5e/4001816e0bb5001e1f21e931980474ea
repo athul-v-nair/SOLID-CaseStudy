@@ -1,0 +1,15 @@
+package com.solid.entity;
+
+import com.solid.interfaces.Advertisement;
+
+public class PremiumUser extends User implements Advertisement{
+	public PremiumUser(String userId, String username, String emailId, String password, String mobileNumber,
+			String securityQuestion, String securityAnswer) {
+		super(userId, username, emailId, password, mobileNumber, securityQuestion, securityAnswer);
+	}
+	
+	@Override
+    public void advertisements() {
+        System.out.println("Don't show Ads. Instead, show the banner to update the premium plan");
+    }
+}

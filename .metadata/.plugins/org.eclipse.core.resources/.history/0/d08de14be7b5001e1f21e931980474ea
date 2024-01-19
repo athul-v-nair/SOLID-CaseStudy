@@ -1,0 +1,7 @@
+package com.solid.entity;
+
+import com.solid.interfaces.UserActions;
+
+public class Admin implements UserActions{
+	private String adminId;
+}

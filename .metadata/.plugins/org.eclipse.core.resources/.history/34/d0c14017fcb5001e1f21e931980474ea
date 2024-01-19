@@ -1,0 +1,14 @@
+package com.solid.services;
+
+import java.util.Scanner;
+
+import com.solid.entity.Admin;
+import com.solid.entity.Customer;
+import com.solid.entity.ServiceProvider;
+import com.solid.interfaces.UserActions;
+
+public class ServiceProviderAccountServices {
+	public static void serviceProviderAccountServices(ServiceProvider serviceProvider) {
+		serviceProvider.cancel();
+	}
+}

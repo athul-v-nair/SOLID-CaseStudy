@@ -1,0 +1,7 @@
+package com.solid.services;
+
+public class ServiceProviderAccountServices {
+	public static void serviceProviderServices(ServiceProvider serviceProvider) {
+		System.out.println(serviceProvider.getCustomerBookings());
+	}
+}

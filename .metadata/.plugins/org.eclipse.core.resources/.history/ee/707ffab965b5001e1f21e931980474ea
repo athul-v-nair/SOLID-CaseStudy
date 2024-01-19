@@ -1,0 +1,15 @@
+package com.solid.services;
+
+import com.solid.interfaces.UserActions;
+
+public class UserRegistrationService {
+	 private UserActions userActions;
+
+	 public UserRegistrationService(UserActions userActions) {
+	     this.userActions = userActions;
+	 }
+
+	 public void registerUser() {
+	     userActions.register();
+	 }
+}

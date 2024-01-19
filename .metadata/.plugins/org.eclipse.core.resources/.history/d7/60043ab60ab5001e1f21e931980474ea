@@ -1,0 +1,12 @@
+package com.solid.entity;
+
+import com.solid.interfaces.Advertisement;
+
+public class NormalUser extends User implements Advertisement{
+
+	public NormalUser(String userId, String username, String emailId, String password, String mobileNumber,
+			String securityQuestion, String securityAnswer) {
+		super(userId, username, emailId, password, mobileNumber, securityQuestion, securityAnswer);
+	}
+
+}

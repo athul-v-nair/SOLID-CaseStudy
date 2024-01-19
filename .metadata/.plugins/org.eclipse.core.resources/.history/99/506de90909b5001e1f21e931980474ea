@@ -1,0 +1,10 @@
+package com.solid.entity;
+
+public class ServiceProvider extends User {
+	private String serviceProviderFirstName;
+	private String serviceProviderLastName;
+	private String serviceProviderAddress;
+	private String serviceProviderContact;
+	private ArrayList<BookingServices> servicesProvided;
+	
+}

@@ -1,0 +1,10 @@
+package com.solid.entity;
+
+import com.solid.interfaces.Advertisement;
+
+public class PremiumUser extends User implements Advertisement{
+	@Override
+    public void advertisements() {
+        System.out.println("No advertisements for Premium Users");
+    }
+}

@@ -1,0 +1,12 @@
+package com.solid.entity;
+
+import java.util.ArrayList;
+
+public class ServiceProvider extends User {
+	private String serviceProviderFirstName;
+	private String serviceProviderLastName;
+	private String serviceProviderAddress;
+	private String serviceProviderContact;
+	private ArrayList<BookingService> servicesProvided;
+	
+}

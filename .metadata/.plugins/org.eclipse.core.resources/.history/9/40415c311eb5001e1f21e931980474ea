@@ -1,0 +1,21 @@
+package com.solid.entity;
+
+import java.util.ArrayList;
+
+import com.solid.interfaces.*;
+
+public class PremiumCustomer extends Customer implements Advertisement, CreateBooking, CancelBooking{
+	
+	public PremiumCustomer(String userId, String username, String emailId, String password, String mobileNumber,
+			String securityQuestion, String securityAnswer, String customerFirstName, String customerLastName,
+			String customerAddress, String customerPaymentDetails, ArrayList<Booking> customerBookings) {
+		super(userId, username, emailId, password, mobileNumber, securityQuestion, securityAnswer, customerFirstName,
+				customerLastName, customerAddress, customerPaymentDetails, customerBookings);
+	}
+
+	@Override
+    public void advertisements() {
+        System.out.println("Show the banner to update the premium plan");
+    }
+	
+}

@@ -1,0 +1,9 @@
+package com.solid.interfaces;
+
+import com.solid.entity.ServiceProvider;
+
+public class ServiceProviderCreation {
+	public static ServiceProvider serviceProviderCreation() {
+		
+	}
+}

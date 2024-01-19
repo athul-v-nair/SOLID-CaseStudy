@@ -1,0 +1,36 @@
+package com.solid.services;
+
+import java.util.Scanner;
+
+import com.solid.entity.Admin;
+import com.solid.entity.Customer;
+import com.solid.entity.ServiceProvider;
+import com.solid.interfaces.UserActions;
+
+public class ServiceProviderAccountServices {
+	public static void serviceProviderAccountServices(ServiceProvider serviceProvider) {
+		int options;
+		char ch;
+		Scanner scanner = new Scanner(System.in);
+		do {
+			System.out.println("1.View your previous bookings, 2.View available actions, 3.Register User");
+			options = scanner.nextInt();
+			scanner.nextLine();
+			switch(options) {
+			case 1: System.out.println(customer.getCustomerBookings());
+				break;
+			case 2: System.out.println("Available actions:");
+				customer.book();
+				customer.cancel();
+				break;	
+			case 3: UserActions userActions = new Admin();
+				UserRegistrationService userRegistrationService = new UserRegistrationService(userActions);
+				userRegistrationService.registerUser();
+				break;
+			}
+			System.out.println("Do you want to continue(y/n):");
+			ch = scanner.next().charAt(0);
+			scanner.nextLine();
+		}while(ch=='y'||ch=='Y');
+	}
+}

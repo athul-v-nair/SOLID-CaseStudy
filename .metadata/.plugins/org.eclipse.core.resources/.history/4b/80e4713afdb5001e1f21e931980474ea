@@ -1,0 +1,9 @@
+package com.solid.services;
+
+import com.solid.entity.ServiceProvider;
+
+public class ServiceProviderAccountServices {
+	public static void serviceProviderServices(ServiceProvider serviceProvider) {
+		System.out.println(serviceProvider.cancel());
+	}
+}

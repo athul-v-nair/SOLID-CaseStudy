@@ -1,0 +1,11 @@
+package com.solid.entity;
+
+import com.solid.interfaces.Advertisement;
+
+public class PremiumUser extends User{
+	public PremiumUser(String userId, String username, String emailId, String password, String mobileNumber,
+			String securityQuestion, String securityAnswer) {
+		super(userId, username, emailId, password, mobileNumber, securityQuestion, securityAnswer);
+	}
+	//Not implementing Advertisement since Premium Users dosn't contain Ads
+}

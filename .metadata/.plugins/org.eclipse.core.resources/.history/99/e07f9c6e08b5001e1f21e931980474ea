@@ -1,0 +1,11 @@
+package com.solid.entity;
+
+import java.util.ArrayList;
+
+public class Customer extends User {
+	private String customerFirstName;
+	private String customerLastName;
+	private String customerAddress;
+	private String customerPaymentDetails;
+	private ArrayList<Booking> customerBookings;
+}
