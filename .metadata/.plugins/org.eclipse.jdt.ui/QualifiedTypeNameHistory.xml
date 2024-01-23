@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.solid.interfaces.Advertisement"/>
+    <fullyQualifiedTypeName name="com.solid.interfaces.CancelBooking"/>
+    <fullyQualifiedTypeName name="com.solid.interfaces.CreateBooking"/>
+    <fullyQualifiedTypeName name="com.solid.interfaces.ServiceProviderActions"/>
+    <fullyQualifiedTypeName name="com.solid.entity.User"/>
+    <fullyQualifiedTypeName name="com.solid.services.UserRegistrationService"/>
+    <fullyQualifiedTypeName name="com.solid.interfaces.UserActions"/>
+    <fullyQualifiedTypeName name="com.solid.services.CustomerCreation"/>
+    <fullyQualifiedTypeName name="com.solid.services.BookingService"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.solid.interfaces.ServiceProviderCreation"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.solid.entity.Customer"/>
+    <fullyQualifiedTypeName name="com.solid.services.CustomerAccountServices"/>
+    <fullyQualifiedTypeName name="com.solid.services.ServiceProviderAccountServices"/>
+    <fullyQualifiedTypeName name="com.solid.entity.Admin"/>
+    <fullyQualifiedTypeName name="com.solid.entity.ServiceProvider"/>
+    <fullyQualifiedTypeName name="com.solid.services.AdminAccountServices"/>
+</qualifiedTypeNameHistroy>

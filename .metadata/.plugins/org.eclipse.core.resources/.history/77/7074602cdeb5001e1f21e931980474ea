@@ -1,9 +1,0 @@
-package com.solid.utility;
-
-public class MainUtility {
-
-	public static void main(String[] args) {
-		
-
-	}
-}
